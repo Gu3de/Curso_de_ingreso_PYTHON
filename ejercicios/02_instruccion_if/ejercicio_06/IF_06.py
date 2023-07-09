@@ -40,16 +40,18 @@ class App(customtkinter.CTk):
         edad = int(edad)
 
         if edad >= 18 :
-            alert(title = "EJ06", message = "Eres Mayor")
+            mensaje = "Eres Mayor"
             
-        if edad <= 17 and edad >= 13 : 
-            alert(title = "EJ06", message = "Eres Adolescente")
+        elif edad <= 17 and edad >= 13 : 
+           mensaje = "Eres Adolescente"
 
-        if edad <= 12 and edad >= 10 : 
-            alert(title = "EJ06", message = "Eres Pre-Adolescente")
+        elif edad <= 12 and edad >= 10 : 
+           mensaje = "Eres Pre-Adolescente"
 
-        if edad < 10 :
-            alert(title = "EJ06", message = "Eres un Niño") 
+        else :
+            mensaje = "Eres un Niño"
+
+        alert(title = "Ej06", message = mensaje)
 
 
         
