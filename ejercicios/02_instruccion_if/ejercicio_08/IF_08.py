@@ -7,6 +7,7 @@ import customtkinter
 '''
 nombre: Patricio Joaquin
 apellido: Guede
+entregad
 ---
 Ejercicio: instrucion_if_08
 ---
