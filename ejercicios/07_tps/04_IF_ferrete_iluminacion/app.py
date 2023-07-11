@@ -41,6 +41,7 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
+        #Punto A.
         marca = self.combobox_marca.get()
         cantidad = self.combobox_cantidad.get()
         cantidad_int = int(cantidad)
@@ -49,10 +50,34 @@ class App(customtkinter.CTk):
         precio_total = precio_lamparita * cantidad_int
         
         if cantidad_int >= 6 :
-          mensaje = precio_total - precio_total * 50 / 100
-          
+            mensaje = precio_total - (precio_total * 50 / 100)
+        #Punto B.  
+        elif cantidad_int == 5 and marca == "ArgentinaLuz" :
+            mensaje = precio_total - (precio_total * 40 / 100)
+            
+        elif cantidad_int == 5 and marca != "ArgentinaLuz" :
+            mensaje = precio_total - (precio_total * 30 / 100)
+        #Punto C.
+        elif cantidad_int == 4 and (marca == "ArgentinaLuz" or marca == "FelipeLamparas") :
+            mensaje = precio_total - (precio_total * 25 / 100)
+            
+        elif cantidad_int == 4 and (marca != "ArgentinaLuz" or marca != "FelipeLamparas") :
+            mensaje = precio_total - (precio_total * 20 / 100)
+        #Punto D.
+        elif cantidad_int == 3 and marca == "ArgentinaLuz" :
+            mensaje = precio_total - (precio_total * 15 / 100)
+            
+        elif cantidad_int == 3 and marca == "FelipeLamparas" :
+            mensaje = precio_total - (precio_total * 10 / 100)
+            
+        elif cantidad_int == 3 and (marca != "ArgentinaLuz" or marca != "FelipeLamparas") :
+            mensaje = precio_total - (precio_total * 5 / 100)
+            
         else :
             mensaje = precio_total
+        #Punto E.
+        if mensaje >= 4000 :
+            mensaje = mensaje - (mensaje * 5 / 100)
             
         alert (title = "Precio", message = f"Su precio final es de : ${mensaje}")
     
