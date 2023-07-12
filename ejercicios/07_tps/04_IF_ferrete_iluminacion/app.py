@@ -50,37 +50,34 @@ class App(customtkinter.CTk):
         precio_total = precio_lamparita * cantidad_int
         
         if cantidad_int >= 6 :
-            mensaje = precio_total - (precio_total * 50 / 100)
-            
+            Descuento =  50
         #Punto B.  
         elif cantidad_int == 5 :
             if  marca == "ArgentinaLuz" :
-                mensaje = precio_total - (precio_total * 40 / 100)
+                Descuento =  40
             else :
-                mensaje = precio_total - (precio_total * 30 / 100)
-                
+                Descuento =  30
         #Punto C.
         elif cantidad_int == 4 :
             if (marca == "ArgentinaLuz" or marca == "FelipeLamparas") :
-                mensaje = precio_total - (precio_total * 25 / 100)
+                Descuento =  25
             else :
-                mensaje = precio_total - (precio_total * 20 / 100)
-                
+                Descuento =  20
         #Punto D.
         elif cantidad_int == 3 :
             if marca == "ArgentinaLuz" :
-                mensaje = precio_total - (precio_total * 15 / 100)
+                Descuento =  15
             elif marca == "FelipeLamparas" :
-                mensaje = precio_total - (precio_total * 10 / 100)
+                Descuento =  10
             else:
-                mensaje = precio_total - (precio_total * 5 / 100)
-            
+                Descuento =  5
         else :
-            mensaje = precio_total
+            Descuento = 0
+        mensaje = precio_total - (precio_total * Descuento / 100)
         #Punto E.
         if mensaje >= 4000 :
             mensaje = mensaje - (mensaje * 5 / 100)
-            
+        
         alert (title = "Precio", message = f"Su precio final es de : ${mensaje}")
         #Corregi el T.P
 if __name__ == "__main__":
