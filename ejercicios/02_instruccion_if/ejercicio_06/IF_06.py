@@ -43,10 +43,10 @@ class App(customtkinter.CTk):
         if edad >= 18 :
             mensaje = "Eres Mayor"
             
-        elif edad <= 17 and edad >= 13 : 
+        elif edad >= 13 : 
            mensaje = "Eres Adolescente"
 
-        elif edad <= 12 and edad >= 10 : 
+        elif edad >= 10 : 
            mensaje = "Eres Pre-Adolescente"
 
         else :

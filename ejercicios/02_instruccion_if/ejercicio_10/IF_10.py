@@ -39,10 +39,10 @@ class App(customtkinter.CTk):
             mensaje = f"Promoción directa, la nota es {numero}"
             
         elif numero < 6 and numero > 3 :
-             mensaje = f"Aprobado, la nota es {numero}"
+            mensaje = f"Aprobado, la nota es {numero}"
                 
         else :
-             mensaje = f"Desaprobado, la nota es {numero}"
+            mensaje = f"Desaprobado, la nota es {numero}"
         
         alert(title = "EJ 10", message = mensaje)
             
