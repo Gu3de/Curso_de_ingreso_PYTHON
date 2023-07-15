@@ -42,9 +42,33 @@ class App(customtkinter.CTk):
         meses = self.combobox_mes.get()
         
         match meses :
-            case "Enero"
-        
-    
+            case "Enero" : 
+                mensaje = "Falta para el invierno.."
+            case "Febrero" : 
+                mensaje = "Falta para el invierno.."
+            case "Marzo" : 
+                mensaje = "Falta para el invierno.."
+            case "Abril" : 
+                mensaje = "Falta para el invierno.."
+            case "Mayo" : 
+                mensaje = "Falta para el invierno.."
+            case "Junio" : 
+                mensaje = "Falta para el invierno.."
+            case "Julio" : 
+                mensaje = "¡Abrígate que hace frío!"
+            case "Agosto" : 
+                mensaje = "¡Abrígate que hace frío!"
+            case "Septiembre" : 
+                mensaje = "¡Ya pasamos frío, ahora calor!"
+            case "Octubre" : 
+                mensaje = "¡Ya pasamos frío, ahora calor!"
+            case "Noviembre" : 
+                mensaje = "¡Ya pasamos frío, ahora calor!"
+            case "Diciembre" : 
+                mensaje = "¡Ya pasamos frío, ahora calor!"
+                
+        alert("EJ02", mensaje)
+
     
 if __name__ == "__main__":
     app = App()
