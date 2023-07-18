@@ -41,45 +41,44 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
-        #Punto A.
         marca = self.combobox_marca.get()
         cantidad = self.combobox_cantidad.get()
         cantidad_int = int(cantidad)
         
         precio_lamparita = 800
         precio_total = precio_lamparita * cantidad_int
-        
-        if cantidad_int >= 6 :
-            Descuento =  50
-        #Punto B.  
-        elif cantidad_int == 5 :
-            if  marca == "ArgentinaLuz" :
-                Descuento =  40
-            else :
-                Descuento =  30
-        #Punto C.
-        elif cantidad_int == 4 :
-            if (marca == "ArgentinaLuz" or marca == "FelipeLamparas") :
-                Descuento =  25
-            else :
-                Descuento =  20
-        #Punto D.
-        elif cantidad_int == 3 :
-            if marca == "ArgentinaLuz" :
-                Descuento =  15
-            elif marca == "FelipeLamparas" :
-                Descuento =  10
-            else:
-                Descuento =  5
-        else :
-            Descuento = 0
-        mensaje = precio_total - (precio_total * Descuento / 100)
-        #Punto E.
+        match cantidad_int :
+            case 1 | 2:
+                Descuento =  1
+            case 3 : 
+                match marca :
+                    case "ArgentinaLuz" :
+                        Descuento = 0.85
+                    case "FelipeLamparas" :
+                        Descuento = 0.90
+                    case _:
+                        Descuento = 0.95
+            case 4 :
+                match marca :
+                    case "ArgentinaLuz" | "FelipeLamparas" :
+                        Descuento = 0.75
+                    case _:
+                        Descuento = 0.80
+            case 5:
+                match marca :
+                    case "ArgentinaLuz":
+                        Descuento = 0.60
+                    case _:
+                        Descuento = 0.70
+            case _:
+                Descuento = 0.50
+                
+        mensaje = precio_total * Descuento
         if mensaje >= 4000 :
             mensaje = mensaje - (mensaje * 5 / 100)
         
         alert (title = "Precio", message = f"Su precio final es de : ${mensaje}")
-        #Corregi el T.P
+        #Hice el tp con match
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
