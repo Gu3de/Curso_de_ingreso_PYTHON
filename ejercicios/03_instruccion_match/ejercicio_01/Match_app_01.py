@@ -8,6 +8,7 @@ import customtkinter
 '''
 Nombre : Patricio Joaquin
 Apellido : Guede
+entregado
 
 Enunciado:
 Obtener el valor del mes seleccionado en el combobox_mes y  

@@ -8,7 +8,7 @@ import customtkinter
 '''
 Nombre : Patricio Joaquin
 Apellido : Guede
-
+entregado
 Enuciado:
 Al presionar el botón ‘Informar’ mostrar mediante alert los siguientes 
 mensajes en función del mes seleccionado:

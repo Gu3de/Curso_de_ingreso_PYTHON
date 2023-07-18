@@ -6,6 +6,9 @@ import customtkinter
 
 
 '''
+Nombre : Patricio Joaquin
+Apellido : Guede
+
 Enunciado:
 Al presionar el botón ‘Pedir clave’, solicitar al usuario que ingrese una contraseña mediante prompt. 
 Comprobar que la contraseña ingresada sea ‘utn750’. En caso de no coincidir, volverla a solicitar hasta que coincidan
@@ -24,8 +27,14 @@ class App(customtkinter.CTk):
         
     
     def btn_pedir_clave_on_click(self):
-        pass
-    
+        clave = prompt(title = "EJ03", prompt = "Ingrese una clave").lower()
+        
+        while( clave != "utn750") :
+            mensaje = "Vuelve a ingresar la clave"
+            alert("EJ04", mensaje)
+            clave = prompt(title = "EJ03", prompt = "Ingrese una clave").lower()
+        mensaje =  "La clave es correcta"
+        alert("EJ03", mensaje)
     
 if __name__ == "__main__":
     app = App()
