@@ -84,7 +84,7 @@ class App(customtkinter.CTk):
                     case "Cordoba" :
                         porcentaje = 1
         precio_total = estadia * porcentaje
-        mensaje = f"El precio final es de {precio_total}"
+        mensaje = f"El precio final es de $ {precio_total}"
         alert("EJ09", mensaje)
 if __name__ == "__main__":
     app = App()
