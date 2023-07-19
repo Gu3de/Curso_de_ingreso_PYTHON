@@ -37,7 +37,6 @@ class App(customtkinter.CTk):
     def btn_comenzar_ingreso_on_click(self):
         suma = 0
         producto = 1
-        numero = "Si"
         while (True) :
             numero = prompt(title = "EJ08", prompt="Ingrese un numero")
             
