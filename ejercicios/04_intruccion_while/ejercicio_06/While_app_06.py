@@ -37,7 +37,8 @@ class App(customtkinter.CTk):
         contador = 0
         acumulador = 0
         while (contador < 5) : 
-            numero = int(prompt(title = "EJ06", prompt = "Ingrese 5 numeros"))
+            numero = prompt(title = "EJ06", prompt = "Ingrese 5 numeros")
+            numero = int(numero)
             contador += 1
             acumulador  += numero
         
