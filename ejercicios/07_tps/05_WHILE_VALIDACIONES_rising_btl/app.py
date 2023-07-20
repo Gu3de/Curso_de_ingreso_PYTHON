@@ -5,6 +5,9 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
+Nombre : Patricio Joaquin
+Apellido : Guede
+
 Rising BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e ingresada 
 por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
 
@@ -50,8 +53,30 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
-        pass
+        apellido = None
+        edad = None
+        legajo = None
 
+        apellido = prompt(title = "Apellido", prompt = "Ingrese un apellido").capitalize()
+        while not apellido.isalpha() or apellido == "":
+            apellido = prompt(title = "Apellido", prompt = "Reingrese un apellido valido").capitalize()
+            
+        edad = prompt(title = "Edad", prompt = "Ingrese una Edad")
+        while not edad.isdigit() or int(edad) < 17 or int(edad) > 90:
+            edad = prompt(title = "Edad", prompt = "Reingrese una Edad valida")
+        
+        estado = self.combobox_tipo.get()
+        
+        legajo = prompt(title = "legajo", prompt = "Ingrese numero de legajo(Sin 0 a la izquierda)")
+        legajo = len(legajo)
+        while  legajo > 4 or legajo < 4 :
+            legajo = prompt(title = "legajo", prompt = "Reingrese el legajo solamente de 4 digitos")
+        
+        self.txt_apellido.delete(0,"end")
+        self.txt_edad.delete(0,"end")
+        
+        self.txt_edad.insert(0,edad)
+        self.txt_apellido.insert(0,apellido)
 
 if __name__ == "__main__":
     app = App()

@@ -61,7 +61,7 @@ class App(customtkinter.CTk):
             
         self.txt_maximo.delete(0, 1000)
         self.txt_minimo.delete(0, 1000)
-        if maximo != None and minimo != None :
+        if maximo != None:
             self.txt_minimo.insert(0, minimo)
             self.txt_maximo.insert(0, maximo)
         
