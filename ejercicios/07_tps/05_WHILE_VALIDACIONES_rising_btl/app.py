@@ -57,27 +57,31 @@ class App(customtkinter.CTk):
         edad = None
         legajo = None
 
-        apellido = prompt(title = "Apellido", prompt = "Ingrese un apellido").capitalize()
-        while not apellido.isalpha() or apellido == "":
-            apellido = prompt(title = "Apellido", prompt = "Reingrese un apellido valido").capitalize()
+        apellido = prompt(title = "Apellido", prompt = "Ingrese un apellido")
+        while apellido == None or not apellido.isalpha() or apellido == "":
+            apellido = prompt(title = "Apellido", prompt = "Reingrese un apellido valido")
             
         edad = prompt(title = "Edad", prompt = "Ingrese una Edad")
-        while not edad.isdigit() or int(edad) < 17 or int(edad) > 90:
+        while edad == None or not edad.isdigit() or int(edad) < 17 or int(edad) > 90:
             edad = prompt(title = "Edad", prompt = "Reingrese una Edad valida")
         
-        estado = self.combobox_tipo.get()
-        
+        estado = prompt(title = "estado", prompt = "Ingrese su estado civil ")
+        while estado == None or estado != "Soltero" and estado != "Casado" and estado != "Divorciado" and estado != "Viudo" and estado != "Soltera" and estado != "Casada" and estado != "Divorciada" and estado != "Viuda":
+            estado = prompt(title = "estado", prompt = "Reinngrese un estado civil valido ")
+            
         legajo = prompt(title = "legajo", prompt = "Ingrese numero de legajo(Sin 0 a la izquierda)")
-        legajo = len(legajo)
-        while  legajo > 4 or legajo < 4 :
-            legajo = prompt(title = "legajo", prompt = "Reingrese el legajo solamente de 4 digitos")
+        while legajo == None or legajo == "" or int(legajo) < 1000 or int(legajo) > 9999 :
+            legajo = prompt(title = "legajo", prompt = "Reingrese el legajo solamente de 4 digitos y sin ceros a la izquierda")
         
         self.txt_apellido.delete(0,"end")
         self.txt_edad.delete(0,"end")
+        self.txt_legajo.delete(0,"end")
         
         self.txt_edad.insert(0,edad)
-        self.txt_apellido.insert(0,apellido)
-
+        self.txt_apellido.insert(0,apellido.capitalize())
+        self.combobox_tipo.set(estado)
+        self.txt_legajo.insert(0, legajo)
+        
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
