@@ -21,7 +21,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        for contador in iter (int,1) :
+            numero = prompt (title = "Ej04", prompt = "Ingrese un numero")
+            if int(numero) == 9 :
+                break
         
     
 if __name__ == "__main__":
