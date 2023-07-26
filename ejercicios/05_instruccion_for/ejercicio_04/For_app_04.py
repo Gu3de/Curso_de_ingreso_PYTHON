@@ -7,7 +7,7 @@ import customtkinter
 '''
 Nombre : Patricio Joaquin
 Apellido : Guede
-
+entregado
 Al presionar el botón Mostrar pedir valores por prompt hasta que el usuario ingrese el valor 9 (se deberá utilizar 'BREAK').
 '''
 

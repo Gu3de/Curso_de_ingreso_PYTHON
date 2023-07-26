@@ -7,7 +7,7 @@ import customtkinter
 '''
 Nombre : Patricio Joaquin
 Apellido : Guede
-
+entregado
 Al presionar el botón 'PROMEDIO' se analizará el vector lista_datos a efectos de calcular 
 el promedio el cual deberá ser informado utilizando Dialog Alert.
 '''

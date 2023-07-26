@@ -9,7 +9,7 @@ import random
 '''
 Nombre : Patricio Joaquin
 Apellido : Guede
-
+entregado
 Al presionar el botón Mostrar 5 veces un mensaje (utilizando el Dialog Alert) con números DESCENDENTES, desde el 1 al 5.
 '''
 

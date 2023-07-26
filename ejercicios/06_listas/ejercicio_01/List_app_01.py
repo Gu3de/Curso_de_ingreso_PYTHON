@@ -7,7 +7,7 @@ import customtkinter
 '''
 Nombre : Patricio Joaquin
 Apellido : Guede
-
+entregado
 Al presionar el botón  'Mostrar', se deberán mostrar los números 
 almacenados en el vector lista_datos utilizando Dialog Alert para informar cada elemento.
 '''

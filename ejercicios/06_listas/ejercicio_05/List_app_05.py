@@ -7,7 +7,7 @@ import customtkinter
 '''
 Nombre : Patricio Joaquin
 Apellido : Guede
-
+entregado
 Al presionar el botón 'SUMATORIA' se analizará el vector lista_datos a efectos de calcular 
 la suma de todos los valores, la cual deberá ser informada utilizando Dialog Alert.
 '''
