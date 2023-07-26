@@ -30,7 +30,7 @@ class App(customtkinter.CTk):
         suma = 0
         for i in self.lista_datos :
             suma += i
-        alert ("EJ05", suma)
+        alert ("EJ05", f"La suma de todos los numeros es {suma}")
     
 if __name__ == "__main__":
     app = App()
