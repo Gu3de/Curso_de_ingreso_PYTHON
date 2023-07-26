@@ -25,9 +25,14 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        numero = prompt(title = "EJ06", prompt = "Ingrese un numero")
-        for i in range (1, int(numero) + 1,) :
-        
+        numero = prompt(title = "EJ07", prompt = "Ingrese un numero")
+        numero = int(numero)
+        contador = 0
+        for i in range(1,numero+1):
+                if numero % i == 0 :
+                    alert("EJ07", f"{i} Es divisor")
+                    contador += 1
+        alert ("EJ07", f"La cantidad de divisores es {contador}")
         
     
 if __name__ == "__main__":
