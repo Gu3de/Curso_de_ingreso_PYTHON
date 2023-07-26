@@ -25,7 +25,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero = prompt(title = "EJ06", prompt = "Ingrese un numero")
+        for i in range (1, int(numero) + 1,) :
+        
         
     
 if __name__ == "__main__":

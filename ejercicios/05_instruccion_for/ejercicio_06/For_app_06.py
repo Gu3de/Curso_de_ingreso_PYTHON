@@ -28,7 +28,6 @@ class App(customtkinter.CTk):
         cantidad_par = 0
         numero = prompt(title = "EJ06", prompt = "Ingrese un numero")
         for i in range (1, int(numero) + 1,) :
-            alert
             if int(i) % 2 == 0 :
                 cantidad_par += 1
                 alert (title = "Ej 06", message = i)
