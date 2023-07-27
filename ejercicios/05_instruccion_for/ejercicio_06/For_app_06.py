@@ -27,7 +27,7 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         cantidad_par = 0
         numero = prompt(title = "EJ06", prompt = "Ingrese un numero")
-        for i in range (1, int(numero) + 1,) :
+        for i in range (1, int(numero) + 1) :
             if int(i) % 2 == 0 :
                 cantidad_par += 1
                 alert (title = "Ej 06", message = i)
